@@ -1,11 +1,14 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
+import { lazy } from "react";
+
+const IndexPage = lazy(() => import("./components/pages/index.page.jsx"));
 
 function App() {
   return (
     <>
       <Routes>
-        <Route element={<h1>Welcome to the App</h1>} path="/"></Route>
+        <Route element={<IndexPage />} path="/"></Route>
       </Routes>
     </>
   );
