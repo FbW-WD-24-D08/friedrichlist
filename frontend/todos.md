@@ -1,2 +1,2 @@
-- Einbau Clerk
 - Loader einbauen
+- Hero Section einbauen

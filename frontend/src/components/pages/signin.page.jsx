@@ -1,5 +1,6 @@
 import { SignIn } from "@clerk/clerk-react";
 import { DefaultLayout } from "../layouts/default.layout.jsx";
+import { Loader } from "../atoms/loader.atom.jsx";
 
 export default function SignInPage() {
   return (
@@ -7,7 +8,7 @@ export default function SignInPage() {
       <DefaultLayout>
         <section className="flex flex-col items-center justify-center h-screen">
           <SignIn
-            fallback={"Loading..."}
+            fallback={<Loader />}
             path="/signin"
             forceRedirectUrl={"/dashboard"}
             signUpUrl="/signup"
