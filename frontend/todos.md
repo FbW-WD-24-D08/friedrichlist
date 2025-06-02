@@ -1,2 +1,3 @@
-- Clerk installieren
+- React Router
+- Einbau Clerk
 - Default Public Page Layout
