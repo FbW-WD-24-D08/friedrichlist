@@ -1,2 +1,1 @@
-- Loader einbauen
-- Hero Section einbauen
+
