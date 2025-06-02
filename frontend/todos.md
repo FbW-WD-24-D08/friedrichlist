@@ -1,0 +1,2 @@
+- Clerk installieren
+- Default Public Page Layout
