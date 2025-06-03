@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { UserAvatar } from "../atoms/user-avatar.atom.jsx";
 import { SidebarItem } from "../molecules/sidebar-Item.comp.jsx";
+import { sidebarDbItems } from "../../config/sidebar-db-items.js";
 
 export function SidebarDB({ children }) {
   return (
@@ -28,16 +29,14 @@ export function SidebarDB({ children }) {
           <UserAvatar />
 
           <ul>
-            <SidebarItem
-              path={"home"}
-              iconifyIcon={"fluent-color:building-government-16"}
-              text={"Home"}
-            />
-            <SidebarItem
-              path={"lists"}
-              iconifyIcon={"fluent-color:apps-list-detail-24"}
-              text={"Lists"}
-            />
+            {sidebarDbItems.map((item) => (
+              <SidebarItem
+                key={item.path}
+                path={item.path}
+                iconifyIcon={item.iconifyIcon}
+                text={item.text}
+              />
+            ))}
           </ul>
         </div>
       </div>

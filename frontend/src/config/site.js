@@ -1,4 +1,10 @@
 export const siteConfig = {
+  social: {
+    twitter: "https://twitter.com/FriedrichList",
+    mastodon: "https://mastodon.social/@FriedrichList",
+    github: "https://githab.com/FriedrichList",
+    discord: "https://discord.gg/FriedrichList",
+  },
   meta: {
     index: {
       title: "FL | Home",

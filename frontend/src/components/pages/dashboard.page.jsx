@@ -11,7 +11,9 @@ export default function DashboardPage() {
         bots={siteConfig.meta.dashboard.bots}
         keywords={siteConfig.meta.dashboard.keywords}
       />
-      <DashboardLayout>Hello Main Page</DashboardLayout>
+      <DashboardLayout>
+        <p>Hello World</p>
+      </DashboardLayout>
     </>
   );
 }
