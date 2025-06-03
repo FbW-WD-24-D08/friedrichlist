@@ -20,7 +20,7 @@ function App() {
         <Route element={<SigninPage />} path="/signin/factor-one" />
         <Route element={<SigninPage />} path="/signin/reset-password" />
         <Route element={<SigninPage />} path="/signin/reset-password-success" />
-        <Route element={<SigninPage />} path="//signin/sso-callback" />
+        <Route element={<SigninPage />} path="/signin/sso-callback" />
         <Route element={<SignUpPage />} path="/signup" />
         <Route element={<SignUpPage />} path="/signup/verify-email-address" />
 

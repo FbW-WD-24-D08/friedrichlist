@@ -1,3 +1,4 @@
+import { siteConfig } from "../../config/site.js";
 import { MetaTags } from "../atoms/metatags.atom.jsx";
 import { DefaultLayout } from "../layouts/default.layout.jsx";
 
@@ -5,12 +6,10 @@ export default function IndexPage() {
   return (
     <>
       <MetaTags
-        title={"FL | Home"}
-        desc={
-          "Herzlich willkommen bei FL! Hier findest du alles, was du brauchst."
-        }
-        bots={true}
-        keywords={"FL, FriedrichList, Wir, sind, eh, die, geilsten"}
+        title={siteConfig.meta.index.title}
+        desc={siteConfig.meta.index.desc}
+        bots={siteConfig.meta.index.bots}
+        keywords={siteConfig.meta.index.keywords}
       />
       <DefaultLayout withHero></DefaultLayout>
     </>
