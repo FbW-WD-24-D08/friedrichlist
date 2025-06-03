@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
 import { lazy } from "react";
+import DashboardPage from "./components/pages/dashboard.page.jsx";
 
 const IndexPage = lazy(() => import("./components/pages/index.page.jsx"));
 const SigninPage = lazy(() => import("./components/pages/signin.page.jsx"));
@@ -25,6 +26,7 @@ function App() {
         <Route element={<SignUpPage />} path="/signup/verify-email-address" />
 
         {/* Dashboard */}
+        <Route element={<DashboardPage />} path="/dashboard" />
       </Routes>
     </>
   );
