@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { UserAvatar } from "../atoms/user-avatar.atom.jsx";
+import { UserAvatar } from "../atoms/user-avatar.comp.jsx";
 import { SidebarItem } from "../molecules/sidebar-Item.comp.jsx";
 import { sidebarDbItems } from "../../config/sidebar-db-items.js";
 

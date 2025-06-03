@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router";
 import "./App.css";
 import { lazy } from "react";
 import DashboardPage from "./components/pages/dashboard.page.jsx";
+import DashboardSupportPage from "./components/pages/dashboard.support.page.jsx";
 
 const IndexPage = lazy(() => import("./components/pages/index.page.jsx"));
 const SigninPage = lazy(() => import("./components/pages/signin.page.jsx"));
@@ -27,6 +28,7 @@ function App() {
 
         {/* Dashboard */}
         <Route element={<DashboardPage />} path="/dashboard" />
+        <Route element={<DashboardSupportPage />} path="/dashboard/support" />
       </Routes>
     </>
   );

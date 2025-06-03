@@ -1,5 +1,5 @@
 import { siteConfig } from "../../config/site.js";
-import { MetaTags } from "../atoms/metatags.atom.jsx";
+import { MetaTags } from "../atoms/metatags.comp.jsx";
 import { DefaultLayout } from "../layouts/default.layout.jsx";
 
 export default function AboutPage() {

@@ -35,6 +35,12 @@ export const siteConfig = {
       desc: "Dein persönliches Dashboard bei FL. Hier findest du alle wichtigen Informationen.",
       bots: true,
       keywords: "FL, FriedrichList, Dashboard, Übersicht",
+      support: {
+        title: "FL | Support",
+        desc: "Erhalte Unterstützung bei Fragen und Problemen rund um FL.",
+        bots: true,
+        keywords: "FL, FriedrichList, Support, Hilfe, Kontakt",
+      },
     },
   },
 };

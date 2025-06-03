@@ -5,7 +5,7 @@ export function SidebarItem({ path, iconifyIcon, text }) {
   return (
     <>
       <li>
-        <NavLink to={path} className="text-lg font-semibold">
+        <NavLink to={path} end className="text-lg font-semibold">
           <div className="flex items-center gap-2">
             <Icon icon={iconifyIcon} />
             <p>{text}</p>

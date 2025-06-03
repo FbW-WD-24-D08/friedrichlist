@@ -1,7 +1,7 @@
 import { SignUp } from "@clerk/clerk-react";
 import { DefaultLayout } from "../layouts/default.layout.jsx";
-import { Loader } from "../atoms/loader.atom.jsx";
-import { MetaTags } from "../atoms/metatags.atom.jsx";
+import { Loader } from "../atoms/loader.comp.jsx";
+import { MetaTags } from "../atoms/metatags.comp.jsx";
 import { siteConfig } from "../../config/site.js";
 MetaTags;
 
