@@ -24,5 +24,11 @@ export const siteConfig = {
       bots: true,
       keywords: "FL, FriedrichList, Registrierung, Konto erstellen",
     },
+    dashboard: {
+      title: "FL | Dashboard",
+      desc: "Dein persönliches Dashboard bei FL. Hier findest du alle wichtigen Informationen.",
+      bots: true,
+      keywords: "FL, FriedrichList, Dashboard, Übersicht",
+    },
   },
 };
