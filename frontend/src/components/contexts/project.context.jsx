@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { siteConfig } from "../../config/site.js";
 
 export const ProjectContext = createContext([]);
 
@@ -11,7 +12,9 @@ export const ProjectProvider = ({ children }) => {
     async function fetchData() {
       // API REQUEST
       try {
-        const response = await fetch("http://localhost:3000/projects");
+        const response = await fetch(
+          `${siteConfig.dburl.host}:${siteConfig.dburl.port}/projects`
+        );
 
         if (!response.ok) throw new Error();
         const data = await response.json();

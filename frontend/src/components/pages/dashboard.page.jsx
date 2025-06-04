@@ -21,8 +21,13 @@ export default function DashboardPage() {
       />
 
       <main>
-        <section aria-label="Titel">
-          <h1 className="text-3xl font-bold mb-6">Übersicht deiner Projekte</h1>
+        <section
+          aria-label="Titel"
+          className="flex justify-center md:justify-start my-8"
+        >
+          <h1 className="text-3xl font-bold mb-6 center">
+            Übersicht deiner Projekte
+          </h1>
         </section>
 
         {isLoading ? (
@@ -37,13 +42,7 @@ export default function DashboardPage() {
             {projects.map((project) => {
               console.log(project);
 
-              return (
-                <ListCard
-                  key={project.id}
-                  title={project.title}
-                  description={project.secondtitle}
-                />
-              );
+              return <ListCard projekt={project} key={project.id} />;
             })}
           </section>
         )}

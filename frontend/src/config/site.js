@@ -1,4 +1,8 @@
 export const siteConfig = {
+  dburl: {
+    host: "http://localhost",
+    port: 3000,
+  },
   social: {
     twitter: "https://twitter.com/FriedrichList",
     mastodon: "https://mastodon.social/@FriedrichList",
