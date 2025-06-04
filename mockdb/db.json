@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Deine erste TodoListe",
+      "secondtitle": "Eine Beschreibung davon"
+    },
+    {
+      "id": "2",
+      "title": "Deine zweite TodoListe",
+      "secondtitle": "Eine Beschreibung davon"
+    },
+    {
+      "id": "3",
+      "title": "Deine dritte TodoListe",
+      "secondtitle": "Eine Beschreibung davon"
+    }
+  ]
+}

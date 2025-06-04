@@ -3,6 +3,8 @@ import "./App.css";
 import { lazy } from "react";
 import DashboardPage from "./components/pages/dashboard.page.jsx";
 import DashboardSupportPage from "./components/pages/dashboard.support.page.jsx";
+import DashboardLayout from "./components/layouts/dashboard.layout.jsx";
+import { ProjectProvider } from "./components/contexts/project.context.jsx";
 
 const NotFoundPage = lazy(() =>
   import("./components/pages/error.notfound.page.jsx")
@@ -33,9 +35,18 @@ function App() {
         <Route element={<SignUpPage />} path="/signup/verify-email-address" />
 
         {/* Dashboard */}
-        <Route element={<DashboardPage />} path="/dashboard" />
-        <Route element={<DashboardSupportPage />} path="/dashboard/support" />
-        <Route element={<DashboardListPage />} path="/dashboard/list/:id" />
+        <Route
+          element={
+            <ProjectProvider>
+              <DashboardLayout />
+            </ProjectProvider>
+          }
+          path="/dashboard"
+        >
+          <Route element={<DashboardPage />} index />
+          <Route element={<DashboardSupportPage />} path="/dashboard/support" />
+          <Route element={<DashboardListPage />} path="/dashboard/list/:id" />
+        </Route>
 
         {/* Error */}
         <Route element={<NotFoundPage />} path="*" />

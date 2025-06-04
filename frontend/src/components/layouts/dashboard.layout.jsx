@@ -1,9 +1,12 @@
+import { Outlet } from "react-router";
 import { SidebarDB } from "../organisms/sidebar-db.org.jsx";
 
-export default function DashboardLayout({ children }) {
+export default function DashboardLayout() {
   return (
     <>
-      <SidebarDB>{children}</SidebarDB>
+      <SidebarDB>
+        <Outlet />
+      </SidebarDB>
     </>
   );
 }
