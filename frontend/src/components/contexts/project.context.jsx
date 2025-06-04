@@ -4,6 +4,8 @@ export const ProjectContext = createContext([]);
 
 export const ProjectProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -15,8 +17,22 @@ export const ProjectProvider = ({ children }) => {
         const data = await response.json();
 
         setProjects(data);
+
+        new Promise((resolve) => {
+          setTimeout(() => {
+            setIsLoading(false);
+            resolve();
+          }, 1000);
+        });
       } catch (error) {
-        console.log(error);
+        console.log("Error ", error);
+        new Promise((resolve) => {
+          setTimeout(() => {
+            setIsLoading(false);
+            setIsError(true);
+            resolve();
+          }, 1000);
+        });
       }
     }
     fetchData();
@@ -25,7 +41,9 @@ export const ProjectProvider = ({ children }) => {
   }, []);
 
   return (
-    <ProjectContext.Provider value={{ projects, setProjects }}>
+    <ProjectContext.Provider
+      value={{ projects, setProjects, isLoading, isError }}
+    >
       {children}
     </ProjectContext.Provider>
   );
