@@ -41,6 +41,12 @@ export const siteConfig = {
         bots: true,
         keywords: "FL, FriedrichList, Support, Hilfe, Kontakt",
       },
+      list: {
+        title: "FL | List",
+        desc: "Dies ist eine deiner Listen. Hier findest du alle Einträge und kannst sie verwalten.",
+        bots: false,
+        keywords: "FL, FriedrichList, Listen, Einträge, Übersicht",
+      },
     },
   },
 };
