@@ -13,8 +13,8 @@ const IndexPage = lazy(() => import("./components/pages/index.page.jsx"));
 const SigninPage = lazy(() => import("./components/pages/signin.page.jsx"));
 const SignUpPage = lazy(() => import("./components/pages/signup.page.jsx"));
 const AboutPage = lazy(() => import("./components/pages/about.page.jsx"));
-const DashboardListPage = lazy(() =>
-  import("./components/pages/dashboard.list.page.jsx")
+const DashboardProjectPage = lazy(() =>
+  import("./components/pages/dashboard.project.page.jsx")
 );
 
 function App() {
@@ -45,7 +45,10 @@ function App() {
         >
           <Route element={<DashboardPage />} index />
           <Route element={<DashboardSupportPage />} path="/dashboard/support" />
-          <Route element={<DashboardListPage />} path="/dashboard/list/:id" />
+          <Route
+            element={<DashboardProjectPage />}
+            path="/dashboard/list/:id"
+          />
         </Route>
 
         {/* Error */}

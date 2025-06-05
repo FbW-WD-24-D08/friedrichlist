@@ -4,8 +4,8 @@ import { ListCard } from "../atoms/list-card.comp.jsx";
 import { MetaTags } from "../atoms/metatags.comp.jsx";
 
 import { ProjectContext } from "../contexts/project.context.jsx";
-import { Loader } from "../atoms/loader.comp.jsx";
 import { Skeleton } from "../atoms/skeleton.comp.jsx";
+import { Header } from "../atoms/header.comp.jsx";
 
 export default function DashboardPage() {
   // API Fetch für Daten
@@ -21,14 +21,7 @@ export default function DashboardPage() {
       />
 
       <main>
-        <section
-          aria-label="Titel"
-          className="flex justify-center md:justify-start my-8"
-        >
-          <h1 className="text-3xl font-bold mb-6 center">
-            Übersicht deiner Projekte
-          </h1>
-        </section>
+        <Header title={"Übersicht deiner Projekte"} />
 
         {isLoading ? (
           <div className="">
@@ -40,8 +33,6 @@ export default function DashboardPage() {
             className="flex flex-wrap gap-4 justify-center md:justify-start"
           >
             {projects.map((project) => {
-              console.log(project);
-
               return <ListCard projekt={project} key={project.id} />;
             })}
           </section>

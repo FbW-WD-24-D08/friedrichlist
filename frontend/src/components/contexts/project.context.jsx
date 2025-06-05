@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { siteConfig } from "../../config/site.js";
+import { useUser } from "@clerk/clerk-react";
 
 export const ProjectContext = createContext([]);
 
@@ -8,12 +9,14 @@ export const ProjectProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
+  const user = useUser();
+
   useEffect(() => {
     async function fetchData() {
       // API REQUEST
       try {
         const response = await fetch(
-          `${siteConfig.dburl.host}:${siteConfig.dburl.port}/projects`
+          `${siteConfig.dburl.host}:${siteConfig.dburl.port}/projects?userid=${user.user?.id}`
         );
 
         if (!response.ok) throw new Error();
@@ -23,6 +26,7 @@ export const ProjectProvider = ({ children }) => {
 
         new Promise((resolve) => {
           setTimeout(() => {
+            setIsError(false);
             setIsLoading(false);
             resolve();
           }, 1000);
@@ -41,7 +45,7 @@ export const ProjectProvider = ({ children }) => {
     fetchData();
 
     return () => {};
-  }, []);
+  }, [user.user]);
 
   return (
     <ProjectContext.Provider
