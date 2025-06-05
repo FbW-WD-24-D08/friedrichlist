@@ -5,6 +5,7 @@ import { MetaTags } from "../atoms/metatags.comp.jsx";
 import { useContext, useEffect, useState } from "react";
 import { ProjectContext } from "../contexts/project.context.jsx";
 import { Header } from "../atoms/header.comp.jsx";
+import { Table } from "../molecules/table.comp.jsx";
 
 export default function DashboardProjectPage() {
   const [project, setProject] = useState({});
@@ -29,6 +30,18 @@ export default function DashboardProjectPage() {
       />
       <main>
         <Header title={project?.title} secondtitle={project?.secondtitle} />
+        <Table
+          head={["TITLE", "BESCHREIBUNG", "STATUS"]}
+          data={[
+            {
+              id: "1",
+              projectid: "2",
+              title: "Klo putzen",
+              desc: "Sieht aus wie sau",
+              status: 0,
+            },
+          ]}
+        />
       </main>
     </>
   );

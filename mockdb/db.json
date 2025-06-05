@@ -24,5 +24,21 @@
       "title": "Deine dritte TodoListe",
       "secondtitle": "Eine Beschreibung davon"
     }
+  ],
+  "todos": [
+    {
+      "id": "1",
+      "projectid": "2",
+      "title": "Klo putzen",
+      "desc": "Sieht aus wie sau",
+      "status": 0
+    },
+    {
+      "id": "2",
+      "projectid": "2",
+      "title": "Abspühlen",
+      "desc": "Das Geschirr liegt schon in der Badewanne",
+      "status": 0
+    }
   ]
 }
