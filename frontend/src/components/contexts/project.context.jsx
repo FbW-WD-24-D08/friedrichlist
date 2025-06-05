@@ -21,7 +21,6 @@ export const ProjectProvider = ({ children }) => {
 
         if (!response.ok) throw new Error();
         const data = await response.json();
-
         setProjects(data);
 
         new Promise((resolve) => {
@@ -33,6 +32,7 @@ export const ProjectProvider = ({ children }) => {
         });
       } catch (error) {
         console.log("Error ", error);
+
         new Promise((resolve) => {
           setTimeout(() => {
             setIsLoading(false);
