@@ -12,7 +12,7 @@ export function ListCard({ projekt }) {
         </figure>
         <div className="card-body">
           <h2 className="card-title"> {projekt.title}</h2>
-          <p>{projekt.description}</p>
+          <p>{projekt.secondtitle}</p>
           <div className="card-actions justify-end mt-6">
             <Link
               to={`/dashboard/list/${projekt.id}`}
